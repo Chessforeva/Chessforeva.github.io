@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+ <url>
+  <loc>https://Chessforeva.github.io/.last_build_id</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/favicon.png</loc>
+  <lastmod>2024-01-17</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/fluti_chess.ico</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/fluti_chess.png</loc>
+  <lastmod>2024-03-26</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/flutter.js</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/flutter_service_worker.js</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/index.html</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/main.dart.js</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/manifest.json</loc>
+  <lastmod>2024-03-26</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/version.json</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/AssetManifest.bin</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/AssetManifest.bin.json</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/AssetManifest.json</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/FontManifest.json</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/NOTICES</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/about.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/bbishop.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/bking.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/bknight.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/bpawn.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/bqueen.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/brook.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/check.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/checkmate_01.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/checkmate_10.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/expl1.png</loc>
+  <lastmod>2011-05-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/expl2.png</loc>
+  <lastmod>2011-05-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/expl3.png</loc>
+  <lastmod>2011-05-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/expl4.png</loc>
+  <lastmod>2011-05-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/fruit.png</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/lousy.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/newgame.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/owl.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/pgnview.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/red-off-16.png</loc>
+  <lastmod>2017-05-14</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/red-on-16.png</loc>
+  <lastmod>2017-05-14</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/repeating.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/stalemate.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/takeback.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/thinking.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wbishop.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wking.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wknight.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wpawn.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wqueen.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/wrook.png</loc>
+  <lastmod>2024-03-08</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/assets/images/yourmove.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/fonts/MaterialIcons-Regular.otf</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/assets/shaders/ink_sparkle.frag</loc>
+  <lastmod>2024-04-11</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/canvaskit.js</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/canvaskit.js.symbols</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/canvaskit.wasm</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/skwasm.js</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/skwasm.js.symbols</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/skwasm.wasm</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/skwasm.worker.js</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/chromium/canvaskit.js</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/chromium/canvaskit.js.symbols</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/canvaskit/chromium/canvaskit.wasm</loc>
+  <lastmod>2024-03-29</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/icons/fluti_chess_192.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/icons/fluti_chess_192_maskable.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/icons/fluti_chess_512.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+ <url>
+  <loc>https://Chessforeva.github.io/icons/fluti_chess_512_maskable.png</loc>
+  <lastmod>2024-03-24</lastmod>
+  <priority>0.1</priority>
+  <changefreq>yearly</changefreq>
+ </url>
+
+</urlset>

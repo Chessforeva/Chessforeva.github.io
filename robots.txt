@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://Chessforeva.github.io/sitemap.xml
+
