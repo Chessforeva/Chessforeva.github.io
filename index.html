@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+canvas { -webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+outline: 0;
+}
+</style>
+
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -29,7 +38,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="fluti_chess.png"/>
 
-  <title>flutichess</title>
+  <title>FlutiChess</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -54,6 +63,23 @@
         }
       });
     });
+
+
+// just mouse action cancelled...
+function preventaction( ev )
+{
+if(ev.preventDefault)
+ {
+ //if(ev.stopPropagation) ev.stopPropagation();
+ ev.preventDefault();
+ }
+else ev.returnvalue = false;
+return false;
+}
+
+
+document.addEventListener('contextmenu', preventaction);
+
   </script>
 </body>
 </html>
