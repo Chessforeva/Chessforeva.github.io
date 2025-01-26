@@ -1,3 +1,5 @@
+/* Modified, look callMy */
+
 (function dartProgram(){function copyProperties(a,b){var s=Object.keys(a)
 for(var r=0;r<s.length;r++){var q=s[r]
 b[q]=a[q]}}function mixinPropertiesHard(a,b){var s=Object.keys(a)
@@ -766,7 +768,12 @@ a0M(a,b){a.height=b
 return b},
 a0N(a,b){a.width=b
 return b},
-Yq(a,b,c){var s,r="getContext"
+Yq(a,b,c){
+	
+/*callMyGetCanvas*/
+callMyGetCanvas(a);
+	
+var s,r="getContext"
 if(c==null)return A.f(a,r,[b])
 else{s=A.V(c)
 return A.f(a,r,[b,s==null?t.K.a(s):s])}},
@@ -24654,7 +24661,12 @@ jc(a,b){var s=A.f(this.a,"getUniformLocation",[a,b])
 if(s==null)throw A.e(A.bJ(b+" not found"))
 else return s},
 Y3(a){var s,r,q=this
-if("transferToImageBitmap" in q.dy&&a){q.dy.getContext("webgl2")
+if("transferToImageBitmap" in q.dy&&a){
+
+/*callMyGetCanvas*/
+callMyGetCanvas(q.dy);
+
+q.dy.getContext("webgl2")
 return q.dy.transferToImageBitmap()}else{s=q.fr
 r=A.ko(q.fx,s)
 s=A.e9(r,"2d",null)
