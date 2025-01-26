@@ -95,48 +95,76 @@ document.addEventListener('contextmenu', preventaction);
 
 _captured_pointerdown = {};
 _captured_pointerup = {};
+_captured_click = {};
+_captured_scroll = {};
+_captured_wheel = {};
+_captured_keydown = {};
+_captured_keyup = {};
+_captured_popstate = {};
 
-function capturedPointerDown( event )
+
+function captured_prevent( event, fu )
 {
- if(event.preventDefault)
+if(event.preventDefault)
 	{
 	event.preventDefault();
 	}
  else event.returnvalue = false;
- 
- if(typeof('event.stopPropagation()')!="undefined") {
-	event.stopPropagation()
- }
- 
- _captured_pointerdown( event );
- 
+ fu(event);
  return false;
 }
+ 
+ 
+function capturedPointerDown( event ) { return captured_prevent( event, _captured_pointerdown ); }
+function capturedPointerUp( event ) { return captured_prevent( event, _captured_pointerup ); }
+function capturedClick( event ) { return captured_prevent( event, _captured_click ); }
+function capturedScroll( event ) { return captured_prevent( event, _captured_scroll ); }
+function capturedWheel( event ) { return captured_prevent( event, _captured_wheel ); }
+function capturedKeyDown( event ) { return captured_prevent( event, _captured_keydown ); }
+function capturedKeyUp( event ) { return captured_prevent( event, _captured_keyup ); }
+function capturedPopstate( event ) { return captured_prevent( event, _captured_popstate ); }
 
-function capturedPointerUp( event )
-{
- if(event.preventDefault)
-	{
-	event.preventDefault();
-	}
- else event.returnvalue = false;
- 
- if(typeof('event.stopPropagation()')!="undefined") {
-	event.stopPropagation()
- }
- _captured_pointerup( event );
- 
- return false;
-}
+_all_events = [];
 
 function callMyAddEventListener(b,c) {
+
+	_all_events.push(b);
+	//"load","error","keydown","keyup","click",
+	//"pointerdown","pointermove","pointerleave","pointerup","pointercancel",
+	//"wheel","popstate","webglcontextlost","webglcontextrestored"
+	
 	if(b=="pointerdown") {
-		_captured_pointerdown = c;
+		captured_pointerdown = c;
 		return capturedPointerDown;
 	}
+
 	if(b=="pointerup") {
 		_captured_pointerup = c;
 		return capturedPointerUp;
+	}
+	if(b=="click") {
+		_captured_click = c;
+		return capturedClick;
+	}
+	if(b=="scroll") {
+		_captured_scroll = c;
+		return capturedScroll;
+	}
+	if(b=="wheel") {
+		_captured_wheel = c;
+		return capturedWheel;
+	}
+	if(b=="keydown") {
+		_captured_keydown = c;
+		return capturedKeyDown;
+	}
+	if(b=="keyup") {
+		_captured_keydown = c;
+		return capturedKeyUp;
+	}
+	if(b=="popstate") {
+		_captured_keydown = c;
+		return capturedPopstate;
 	}
 	return c;
 }
