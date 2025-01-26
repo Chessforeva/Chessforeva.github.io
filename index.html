@@ -104,6 +104,10 @@ function capturedPointerDown( event )
 	}
  else event.returnvalue = false;
  
+ if(typeof('event.stopPropagation()')!="undefined") {
+	event.stopPropagation()
+ }
+ 
  _captured_pointerdown( event );
  
  return false;
@@ -117,6 +121,9 @@ function capturedPointerUp( event )
 	}
  else event.returnvalue = false;
  
+ if(typeof('event.stopPropagation()')!="undefined") {
+	event.stopPropagation()
+ }
  _captured_pointerup( event );
  
  return false;
@@ -127,7 +134,7 @@ function callMyAddEventListener(b,c) {
 		_captured_pointerdown = c;
 		return capturedPointerDown;
 	}
-	if(b=="pointerdup") {
+	if(b=="pointerup") {
 		_captured_pointerup = c;
 		return capturedPointerUp;
 	}
