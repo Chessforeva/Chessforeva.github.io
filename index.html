@@ -204,8 +204,8 @@ function SetMyTitle() {
 	var g = document.getElementById('bg');
 	if(g!=null) {
 		g.style.zIndex = 8888;
-		g.addEventListener('pointerdown',capturedPointerDown);
-		g.addEventListener('click',capturedPointerDown);
+		g.addEventListener('pointerdown',_captured_pointerdown);
+		g.addEventListener('click',_captured_pointerdown);
 		}
 }
 
