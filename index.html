@@ -146,6 +146,8 @@ _all_events = [];
 
 function callMyAddEventListener(b,c) {
 
+	return c;
+
 	_all_events.push(b);
 	//"load","error","keydown","keyup","click",
 	//"pointerdown","pointermove","pointerleave","pointerup","pointercancel",
@@ -213,8 +215,10 @@ function callMyGetCanvas(a) {
 function callMyEventCase(b) {
 	if(b.length) {
 		var w = b[0];
-		if( typeof(w.type)=="string"  && w.type!="pointermove") {
-		 if( w.type.indexOf("pointerdown")>=0 ) {
+		if( typeof(w.type)=="string") {
+
+			if(w.type!="pointermove" && w.type!="pointerleave") {
+  
 			var event = w;
 			if(event.preventDefault)
 				{
@@ -225,17 +229,23 @@ function callMyEventCase(b) {
 			if(typeof(event.stopPropagation)!="undefined") {
 				event.stopPropagation();
 			}
-			_CANVAS.focus();
-		 }
-		 var debug = document.getElementById('debug');
-		 if(typeof(_CANVAS.width)!="undefined") {
-			debug.style.left = '1200px';
-			debug.style.top = '20px';
-			debug.style.zIndex = 8888;
-			}
+			
+			document.title = "FlutiChess dbg2a"
+			
+		var debug = document.getElementById('debug');
+		 
 		 debug.innerHTML+='['+ w.type + ']';
 		 setTimeout('clearDebug()',3000);
+		 
+		 
 		}
+		
+		if(typeof(_CANVAS.clientWidth)!="undefined" || typeof(_CANVAS.width)!="undefined") {
+			_CANVAS.focus();
+			}
+		 
+		}
+				 
 	}
 }
 
@@ -245,10 +255,20 @@ function clearDebug() {
 }
 
 function SetMyTitle() {
-	document.title = "FlutiChess dbg1";
+	document.title = "FlutiChess dbg2";
 	var g = document.getElementById('debug');
 	if(g!=null) {
 		g.style.zIndex = 8888;
+		
+		//if(typeof(_CANVAS.clientWidth)!="undefined") {
+			g.style.left = '1020px';
+			g.style.top = '160px';
+			g.style.width = '200px';
+			g.style.height = '200px';
+			g.style.zIndex = 8888;
+			//_CANVAS.focus();
+		//	}
+			
 	}
 	//var g = document.getElementById('bg');
 	//if(g!=null) {
