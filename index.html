@@ -17,6 +17,8 @@
     the `--base-href` argument provided to `flutter build`.
   -->
   
+  <div id="bg" style="width:980px;height:820px;position:absolute;top:0px;left:0px;" onmousedown="preventaction(event)"></div>
+
   <base href="/">
 
   <meta charset="UTF-8">
@@ -81,6 +83,9 @@ if(event.preventDefault)
  event.preventDefault();
  }
 else event.returnvalue = false;
+if(typeof(event.stopPropagation)!="undefined") {
+	event.stopPropagation();
+	}
 return false;
 }
 
@@ -112,6 +117,9 @@ if(event.preventDefault)
 	event.preventDefault();
 	}
  else event.returnvalue = false;
+ if(typeof(event.stopPropagation)!="undefined") {
+	event.stopPropagation();
+	}
  fu(event);
  return false;
 }
@@ -139,7 +147,7 @@ function callMyAddEventListener(b,c) {
 	//"wheel","popstate","webglcontextlost","webglcontextrestored"
 	
 	if(b=="pointerdown") {
-		captured_pointerdown = c;
+		_captured_pointerdown = c;
 		return capturedPointerDown;
 	}
 
@@ -188,12 +196,16 @@ function callMyAddEventListener(b,c) {
 
 // capture on body loaded
 function callMyOnload() {
-	setTimeout('SetMyTitle()',1000);
-	setTimeout('SetMyTitle()',5000);
+	setTimeout('SetMyTitle()',3000);
 }
 
 function SetMyTitle() {
 	document.title = "FlutiChess";
+	var g = document.getElementById('bg');
+	if(g!=null) {
+		g.style.zIndex = 8888;
+		g.addEventListener('pointerdown',capturedPointerDown);
+		}
 }
 
   </script>
