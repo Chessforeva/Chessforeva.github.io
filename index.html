@@ -210,6 +210,8 @@ _CANVAS = {}
 
 function callMyGetCanvas(a) {
 	_CANVAS = a;
+	_TITLE += '_js_';
+	document.title = _TITLE;
 }
 
 function callMyEventCase(b) {
@@ -230,7 +232,7 @@ function callMyEventCase(b) {
 				event.stopPropagation();
 			}
 			
-			document.title = "FlutiChess dbg2a"
+			document.title = _TITLE + "a";
 			
 		var debug = document.getElementById('debug');
 		 
@@ -254,8 +256,10 @@ function clearDebug() {
  debug.innerHTML='';
 }
 
+_TITLE = "FlutiChess dbg3";
+
 function SetMyTitle() {
-	document.title = "FlutiChess dbg2";
+	document.title = _TITLE;
 	var g = document.getElementById('debug');
 	if(g!=null) {
 		g.style.zIndex = 8888;
