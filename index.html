@@ -99,9 +99,11 @@ _captured_click = {};
 _captured_scroll = {};
 _captured_wheel = {};
 _captured_keydown = {};
+_captured_keypress = {};
 _captured_keyup = {};
 _captured_popstate = {};
-
+_captured_blur = {};
+_captured_focus = {};
 
 function captured_prevent( event, fu )
 {
@@ -121,8 +123,11 @@ function capturedClick( event ) { return captured_prevent( event, _captured_clic
 function capturedScroll( event ) { return captured_prevent( event, _captured_scroll ); }
 function capturedWheel( event ) { return captured_prevent( event, _captured_wheel ); }
 function capturedKeyDown( event ) { return captured_prevent( event, _captured_keydown ); }
+function capturedKeyPress( event ) { return captured_prevent( event, _captured_keypress ); }
 function capturedKeyUp( event ) { return captured_prevent( event, _captured_keyup ); }
 function capturedPopstate( event ) { return captured_prevent( event, _captured_popstate ); }
+function capturedBlur( event ) { return captured_prevent( event, _captured_blur ); }
+function capturedFocus( event ) { return captured_prevent( event, _captured_focus ); }
 
 _all_events = [];
 
@@ -158,13 +163,25 @@ function callMyAddEventListener(b,c) {
 		_captured_keydown = c;
 		return capturedKeyDown;
 	}
+	if(b=="keypress") {
+		_captured_keypress = c;
+		return capturedKeyPress
+	}
 	if(b=="keyup") {
-		_captured_keydown = c;
+		_captured_keyup = c;
 		return capturedKeyUp;
 	}
 	if(b=="popstate") {
-		_captured_keydown = c;
+		_captured_popstate = c;
 		return capturedPopstate;
+	}
+	if(b=="blur") {
+		_captured_blur = c;
+		return capturedBlur;
+	}
+	if(b=="focus") {
+		_captured_focus = c;
+		return capturedFocus;
 	}
 	return c;
 }
