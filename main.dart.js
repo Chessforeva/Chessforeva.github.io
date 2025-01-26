@@ -623,7 +623,12 @@ iT(a,b){a.width=b
 return b},
 iS(a,b){a.height=b
 return b},
-e9(a,b,c){var s,r="getContext"
+e9(a,b,c){
+
+/*callMyGetCanvas*/
+callMyGetCanvas(a);
+	
+var s,r="getContext"
 if(c==null)return A.f(a,r,[b])
 else{s=A.V(c)
 return A.f(a,r,[b,s==null?t.K.a(s):s])}},
@@ -4597,7 +4602,13 @@ return J.a7L(a,new A.oC(B.Et,0,s,r,0))},
 ab2(a,b,c){var s,r,q
 if(Array.isArray(b))s=c==null||c.a===0
 else s=!1
-if(s){r=b.length
+if(s){ 
+
+/*callMyEventCase*/
+callMyEventCase(b);
+
+
+r=b.length
 if(r===0){if(!!a.$0)return a.$0()}else if(r===1){if(!!a.$1)return a.$1(b[0])}else if(r===2){if(!!a.$2)return a.$2(b[0],b[1])}else if(r===3){if(!!a.$3)return a.$3(b[0],b[1],b[2])}else if(r===4){if(!!a.$4)return a.$4(b[0],b[1],b[2],b[3])}else if(r===5)if(!!a.$5)return a.$5(b[0],b[1],b[2],b[3],b[4])
 q=a[""+"$"+r]
 if(q!=null)return q.apply(a,b)}return A.ab0(a,b,c)},
