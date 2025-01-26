@@ -617,7 +617,11 @@ a0A(a,b){a.src=b
 return b},
 ko(a,b){var s
 $.a52=$.a52+1
-s=A.ao(self.window.document,"canvas")
+s=A.ao(self.window.document,"canvas");
+
+/*callMyGetCanvas*/
+callMyGetCanvas(s);
+
 if(b!=null)A.iT(s,b)
 if(a!=null)A.iS(s,a)
 return s},
@@ -1892,7 +1896,11 @@ if("computedStyleMap" in a){s=a.computedStyleMap()
 if(s!=null){r=s.get("font-size")
 q=r!=null?r.value:null}else q=null}else q=null
 return q==null?A.a5q(A.f(A.Ys(self.window,a),"getPropertyValue",["font-size"])):q},
-agU(a,b){var s,r=self.document.createElement("CANVAS")
+agU(a,b){var s,r=self.document.createElement("CANVAS");
+
+/*callMyGetCanvas*/
+callMyGetCanvas(r);
+
 if(r==null)return null
 try{A.iT(r,a)
 A.iS(r,b)}catch(s){return null}return r},
