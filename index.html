@@ -18,7 +18,6 @@
   -->
   
   <div id="bg" style="width:0px;height:0px;position:absolute;top:0px;left:0px;" onmousedown="preventaction(event)"></div>
-  <div id="debug" style="width:200px;height:400px;position:absolute;top:0px;left:0px;"></div>
 
 
   <base href="/">
@@ -75,9 +74,11 @@ outline: 0;
         }
       });
     });
-
-// Small modifications to make this game more playable
-
+//
+//
+// Bunch of hacks to avoid scrolling events or something like that
+//
+//
 
 // just mouse action cancelled...
 function preventaction( event )
@@ -142,145 +143,72 @@ function capturedPopstate( event ) { return captured_prevent( event, _captured_p
 function capturedBlur( event ) { return captured_prevent( event, _captured_blur ); }
 function capturedFocus( event ) { return captured_prevent( event, _captured_focus ); }
 
-_all_events = [];
+//_all_events = [];
 
 function callMyAddEventListener(b,c) {
 
-	return c;
+	//_all_events.push(b);
 
-	_all_events.push(b);
 	//"load","error","keydown","keyup","click",
 	//"pointerdown","pointermove","pointerleave","pointerup","pointercancel",
 	//"wheel","popstate","webglcontextlost","webglcontextrestored"
 	
-	if(b=="pointerdown") {
-		_captured_pointerdown = c;
-		return capturedPointerDown;
-	}
-
-	if(b=="pointerup") {
-		_captured_pointerup = c;
-		return capturedPointerUp;
-	}
-	if(b=="click") {
-		_captured_click = c;
-		return capturedClick;
-	}
-	if(b=="scroll") {
-		_captured_scroll = c;
-		return capturedScroll;
-	}
-	if(b=="wheel") {
-		_captured_wheel = c;
-		return capturedWheel;
-	}
-	if(b=="keydown") {
-		_captured_keydown = c;
-		return capturedKeyDown;
-	}
-	if(b=="keypress") {
-		_captured_keypress = c;
-		return capturedKeyPress
-	}
-	if(b=="keyup") {
-		_captured_keyup = c;
-		return capturedKeyUp;
-	}
-	if(b=="popstate") {
-		_captured_popstate = c;
-		return capturedPopstate;
-	}
-	if(b=="blur") {
-		_captured_blur = c;
-		return capturedBlur;
-	}
-	if(b=="focus") {
-		_captured_focus = c;
-		return capturedFocus;
-	}
+	if(b=="pointerdown") { _captured_pointerdown = c; return capturedPointerDown; }
+	if(b=="pointerup") { _captured_pointerup = c; return capturedPointerUp; }
+	if(b=="click") { _captured_click = c; return capturedClick; }
+	if(b.indexOf("scroll")>=0) { _captured_scroll = c; return capturedScroll; }
+	if(b=="wheel") { _captured_wheel = c; return capturedWheel; }
+	if(b=="keydown") { _captured_keydown = c; return capturedKeyDown; }
+	if(b=="keypress") { _captured_keypress = c; return capturedKeyPress }
+	if(b=="keyup") { _captured_keyup = c; return capturedKeyUp; }
+	if(b=="popstate") { _captured_popstate = c; return capturedPopstate; }
+	if(b=="blur") { _captured_blur = c; return capturedBlur; }
+	if(b=="focus") { _captured_focus = c; return capturedFocus; }
 	return c;
 }
 
 // capture on body loaded
 function callMyOnload() {
+	SetMyTitle();
+	setTimeout('SetMyTitle()',1000);
 	setTimeout('SetMyTitle()',3000);
+}
+
+function SetMyTitle() {
+	document.title = "FlutiChess";
 }
 
 _CANVAS = {}
 
 function callMyGetCanvas(a) {
-	_CANVAS = a;
-	_TITLE += '_js_';
-	document.title = _TITLE;
+	if(typeof(a.clientWidth)!="undefined" || typeof(a.width)!="undefined") {
+		_CANVAS = a;
+	}
 }
 
 function callMyEventCase(b) {
 	if(b.length) {
 		var w = b[0];
 		if( typeof(w.type)=="string") {
-
-			if(w.type!="pointermove" && w.type!="pointerleave") {
   
-			var event = w;
-			if(event.preventDefault)
-				{
-				event.preventDefault();
+				var event = w;
+				if(event.preventDefault)
+					{
+					event.preventDefault();
+					}
+				event.returnvalue = false;
+
+				if(typeof(event.stopPropagation)!="undefined") {
+					event.stopPropagation();
 				}
-			event.returnvalue = false;
-
-			if(typeof(event.stopPropagation)!="undefined") {
-				event.stopPropagation();
-			}
-			
-			document.title = _TITLE + "a";
-			
-		var debug = document.getElementById('debug');
-		 
-		 debug.innerHTML+='['+ w.type + ']';
-		 setTimeout('clearDebug()',3000);
-		 
-		 
+					
+				if(typeof(_CANVAS.clientWidth)!="undefined" || typeof(_CANVAS.width)!="undefined") {
+					_CANVAS.focus();
+				}				 
 		}
-		
-		if(typeof(_CANVAS.clientWidth)!="undefined" || typeof(_CANVAS.width)!="undefined") {
-			_CANVAS.focus();
-			}
-		 
-		}
-				 
 	}
 }
 
-function clearDebug() {
- var debug = document.getElementById('debug');
- debug.innerHTML='';
-}
-
-_TITLE = "FlutiChess dbg3";
-
-function SetMyTitle() {
-	document.title = _TITLE;
-	var g = document.getElementById('debug');
-	if(g!=null) {
-		g.style.zIndex = 8888;
-		
-		//if(typeof(_CANVAS.clientWidth)!="undefined") {
-			g.style.left = '1020px';
-			g.style.top = '160px';
-			g.style.width = '200px';
-			g.style.height = '200px';
-			g.style.zIndex = 8888;
-			//_CANVAS.focus();
-		//	}
-			
-	}
-	//var g = document.getElementById('bg');
-	//if(g!=null) {
-	//	g.style.zIndex = 8888;
-	//	g.addEventListener('pointerdown',_captured_pointerdown);
-	//	g.addEventListener('click',_captured_pointerdown);
-	//	}
-}
 
   </script>
 </body>
