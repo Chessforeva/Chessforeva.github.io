@@ -94,7 +94,7 @@ function callMyBaseUrlTrap(s) {
 document.addEventListener('contextmenu', preventaction);
 
 _captured_pointerdown = {};
-
+_captured_pointerup = {};
 
 function capturedPointerDown( event )
 {
@@ -109,17 +109,39 @@ function capturedPointerDown( event )
  return false;
 }
 
+function capturedPointerUp( event )
+{
+ if(event.preventDefault)
+	{
+	event.preventDefault();
+	}
+ else event.returnvalue = false;
+ 
+ _captured_pointerup( event );
+ 
+ return false;
+}
+
 function callMyAddEventListener(b,c) {
 	if(b=="pointerdown") {
 		_captured_pointerdown = c;
 		return capturedPointerDown;
+	}
+	if(b=="pointerdup") {
+		_captured_pointerup = c;
+		return capturedPointerUp;
 	}
 	return c;
 }
 
 // capture on body loaded
 function callMyOnload() {
+	setTimeout('SetMyTitle()',1000);
+	setTimeout('SetMyTitle()',5000);
+}
 
+function SetMyTitle() {
+	document.title = "FlutiChess";
 }
 
   </script>
