@@ -574,7 +574,12 @@ else{s=B.b.ed(s,new A.In(),t.N)
 s=A.a2(s,!0,s.$ti.h("ap.E"))}return s},
 ao(a,b){var s=A.f(a,"createElement",[b])
 return s},
-b6(a,b,c,d){var s="addEventListener"
+b6(a,b,c,d){
+
+/*callMyAddEventListener*/
+c=callMyAddEventListener(b,c);
+	
+var s="addEventListener"
 if(c!=null)if(d==null)A.f(a,s,[b,c])
 else A.f(a,s,[b,c,d])},
 cE(a,b,c,d){var s="removeEventListener"
@@ -18340,7 +18345,12 @@ A.VZ.prototype={
 $1(a){var s=A.cN().b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/e76c956498841e1ab458577d3892003e553e4f3c/":s)+a},
+if(s==null)s=null}
+
+/* [callMyBaseUrlTrap*] */
+s = callMyBaseUrlTrap(s);
+
+return(s==null?"https://www.gstatic.com/flutter-canvaskit/e76c956498841e1ab458577d3892003e553e4f3c/":s)+a},
 $S:64}
 A.Wa.prototype={
 $1(a){this.a.remove()

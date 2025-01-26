@@ -2,13 +2,6 @@
 <html>
 <head>
 
-<style>
-canvas { -webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-outline: 0;
-}
-</style>
 
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -23,11 +16,12 @@ outline: 0;
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
+  
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A simple chess playing Flutter project.">
+  <meta name="description" content="Play browser chess made in flutter.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,7 +42,19 @@ outline: 0;
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
-<body>
+
+<body onload="callMyOnload()">
+
+<style>
+canvas { -webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+outline: 0;
+}
+</style>
+
+
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -64,21 +70,57 @@ outline: 0;
       });
     });
 
+// Small modifications to make this game more playable
+
 
 // just mouse action cancelled...
-function preventaction( ev )
+function preventaction( event )
 {
-if(ev.preventDefault)
+if(event.preventDefault)
  {
- //if(ev.stopPropagation) ev.stopPropagation();
- ev.preventDefault();
+ event.preventDefault();
  }
-else ev.returnvalue = false;
+else event.returnvalue = false;
 return false;
 }
 
 
+// capture and redirect url of canvas canvaskit scripts 
+function callMyBaseUrlTrap(s) {
+	return s;
+}
+
+
 document.addEventListener('contextmenu', preventaction);
+
+_captured_pointerdown = {};
+
+
+function capturedPointerDown( event )
+{
+ if(event.preventDefault)
+	{
+	event.preventDefault();
+	}
+ else event.returnvalue = false;
+ 
+ _captured_pointerdown( event );
+ 
+ return false;
+}
+
+function callMyAddEventListener(b,c) {
+	if(b=="pointerdown") {
+		_captured_pointerdown = c;
+		return capturedPointerDown;
+	}
+	return c;
+}
+
+// capture on body loaded
+function callMyOnload() {
+
+}
 
   </script>
 </body>
