@@ -25,6 +25,24 @@
   <meta name="description" content="Play browser chess made in flutter.">
 
 <style>
+
+html, body {
+    /* This prevents the TV from triggering 'Pan-Zoom' mode */
+    touch-action: pan-y; 
+    /* This prevents the TV from trying to 'highlight' the whole page as a block */
+    -webkit-user-select: none;
+    user-select: none;
+    
+    /* Crucial: Prevent the 'overscroll' glow/bounce that triggers the arrows */
+    overscroll-behavior-y: none;
+}
+
+/* Re-enable selection only for your links if needed */
+a {
+    touch-action: manipulation;
+    -webkit-user-drag: none;
+}
+
 /* This only triggers on TVs */
 body.is-tv-mode {
     height: 100vh;
@@ -38,6 +56,8 @@ body.is-tv-mode .main-content {
     -webkit-overflow-scrolling: touch;
 }
 </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -85,6 +105,17 @@ window.onload = function() {
     }
     callMyOnload();
 };
+
+// This tells the TV browser that scrolling is handled 
+// by the site, not the TV's helper.
+window.addEventListener('wheel', function(e) {
+    // Logic here
+}, { passive: true });
+
+window.addEventListener('touchstart', function(e) {
+    // Logic here
+}, { passive: true });
+
 
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
