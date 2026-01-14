@@ -24,6 +24,21 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Play browser chess made in flutter.">
 
+<style>
+/* This only triggers on TVs */
+body.is-tv-mode {
+    height: 100vh;
+    overflow: hidden !important; /* Force the TV browser to stop scrolling */
+}
+
+/* Create a scrollable area inside the body for TVs */
+body.is-tv-mode .main-content {
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+</style>
+
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -59,6 +74,17 @@ outline: 0;
 
 
   <script>
+
+window.onload = function() {
+    var ua = navigator.userAgent.toLowerCase();
+    var isTV = /smart-tv|smarttv|googletv|appletv|hbbtv|pov_tv|netcast|webos|tizen|viera|bravia|kylo|puffin/i.test(ua);
+
+    if (isTV) {
+        document.body.classList.add('is-tv-mode');
+        console.log("TV Browser Detected: Applying scroll-fix.");
+    }
+};
+
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
